@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <fragment.bwie.com.rikao5.CustomNavigationBar
+        android:id="@+id/custom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <fragment.bwie.com.rikao5.CustomProgrssView
+        android:layout_width="match_parent"
+        android:layout_height="200sp"/>
+
+    <Button
+        android:id="@+id/saomiao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="扫描二维码"/>
+
+</LinearLayout>
