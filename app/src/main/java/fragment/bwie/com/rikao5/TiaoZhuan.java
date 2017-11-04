@@ -9,5 +9,8 @@ public class TiaoZhuan extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tiao_zhuan);
+
+
+        //的的是的撒大
     }
 }
