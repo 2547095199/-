@@ -5,25 +5,24 @@
              android:background="#cccccc">
 
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50sp"
-            android:background="#D4DBED"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:background="#D4DBED">
 
             <ImageView
                 android:id="@+id/back_title"
                 android:layout_width="50sp"
                 android:layout_height="50sp"
-                android:layout_gravity="center"
+                android:layout_centerVertical="true"
                 android:src="@drawable/a"/>
 
             <TextView
                 android:id="@+id/navigation_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="90sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
                 android:text="那些花儿"
                 android:textSize="20pt"/>
 
@@ -31,10 +30,10 @@
                 android:id="@+id/call_back"
                 android:layout_width="50sp"
                 android:layout_height="50sp"
-                android:layout_gravity="right"
-                android:layout_marginLeft="90sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
                 android:src="@drawable/e"/>
-        </LinearLayout>
+        </RelativeLayout>
 
 
 

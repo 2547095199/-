@@ -8,20 +8,20 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.xys.libzxing.zxing.activity.CaptureActivity;
-
 public class MainActivity extends AppCompatActivity {
+
+    private CustomProgrssView customProgrssView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button button = (Button) findViewById(R.id.saomiao);
+        customProgrssView = (CustomProgrssView) findViewById(R.id.custom);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent openCameraIntent = new Intent(MainActivity.this,CaptureActivity.class);
-                startActivityForResult(openCameraIntent, 0);
+                customProgrssView.start();
             }
         });
 

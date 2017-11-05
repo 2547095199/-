@@ -34,26 +34,7 @@ public class CustomProgrssView extends View {
         paint.setColor(Color.RED);
         //设置画笔，填充是空心的
         paint.setStyle(Paint.Style.STROKE);
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                while (runing) {
-                    if (progress >= 360) {
-                        runing = false;
-                        return;
-                    }
-                    System.out.println("progress" + progress);
-                    progress += 10;
-                    //子线程刷新，系统调用onDraw方法
-                    postInvalidate();
-                    try {
-                        Thread.sleep(100);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        }).start();
+
     }
 
     float sweep;
@@ -89,6 +70,29 @@ public class CustomProgrssView extends View {
         canvas.drawText(text + "%", x - textWidth / 2, y + recttext.height() / 4, paint);
 
 
+    }
+
+    public void start() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (runing) {
+                    if (progress >= 360) {
+                        runing = false;
+                        return;
+                    }
+                    System.out.println("progress" + progress);
+                    progress += 10;
+                    //子线程刷新，系统调用onDraw方法
+                    postInvalidate();
+                    try {
+                        Thread.sleep(100);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
     }
 }
 
